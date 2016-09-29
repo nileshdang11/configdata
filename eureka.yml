@@ -1,0 +1,53 @@
+---
+server:
+  port: 8011
+  address: 127.0.0.1
+spring:
+  application:
+    name: eureka
+     
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8011/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+   
+   
+# primary, secondary, and tertiary illustrate running 3 intercommunicating instances.  This example has them running
+# side-by-side on localhost -- which is unrealistic in production -- but does illustrate how multiple instances collaborate.
+# Run by opening 3 separate command prompts:
+# java -jar -Dspring.profiles.active=primary lab-4-eureka-server-solution-1.jar
+# java -jar -Dspring.profiles.active=secondary lab-4-eureka-server-solution-1.jar
+# java -jar -Dspring.profiles.active=tertiary lab-4-eureka-server-solution-1.jar 
+---
+spring:
+  profiles: primary
+  application:
+    name: eurekacluster
+    
+server:
+  port: 8011
+  address" 127.0.0.1
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8012/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    
+---
+spring:
+  profiles: secondary
+  application:
+    name: eurekacluster
+    
+server:
+  port: 8012
+  address: 127.0.0.1
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8011/eureka/
+    register-with-eureka: true
+    fetch-registry: true
