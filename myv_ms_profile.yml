@@ -1,0 +1,15 @@
+---
+server:
+  port: 8090
+eureka: 
+  client: 
+    serviceUrl:
+      defaultZone: http://localhost:8011/eureka/,http://localhost:8011/eureka/
+msProfile:
+  message: called myv_ms_profile
+  name: John Doer
+  message_v2: called myv_ms_profile called with endpoint of V2
+  name_v2: John Doe II
+
+message: Hello
+whomToSayHello: Nilesh from myv_ms_profile_v2:prop

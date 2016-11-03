@@ -1,0 +1,8 @@
+---
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://localhost:8011/eureka/
+
+Message: My prop from application prop file!
+WhomToSayHelloTo: Nilesh

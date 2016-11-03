@@ -1,0 +1,38 @@
+---
+#/ms/profile/v1/hello
+server: 
+  port: 8086
+
+turbine:
+  app-config: myv_ms_bill_gateway
+  cluster-name-expression: 'default'
+  
+msBillGateway:
+  message: called myv_ms_bill_gateway_v2 
+---
+spring:
+  profiles: default
+
+VersionConfig:
+  profileBaseUrl: /ms/profile/
+  profileServiceName: myv_ms_profile
+  profileVersion: v2
+
+  billBaseUrl: /ms/bill/
+  billServiceName: myv_ms_bill
+  billVersion: v1
+ 
+---
+spring:
+  profiles: gw_config_change_to_parallel
+ 
+VersionConfig:
+  profileServiceName: myv_ms_profile
+  profileBaseUrl: /ms/profile/
+  profileVersion: v1
+  profileVersion2: v2
+  billServiceName: myv_ms_bill
+  billBaseUrl: /ms/bill/
+  billVersion: v1
+  billVersion2: v2
+

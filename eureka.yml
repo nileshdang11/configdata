@@ -1,17 +1,12 @@
 ---
 server:
   port: 8011
-spring:
-  application:
-    name: eureka
+
      
 eureka:
   instance:
-    hostname: localhost
-    preferIpAddress: false 
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8011/eureka/
+#    hostname: localhost
+#    preferIpAddress: false 
     register-with-eureka: false
     fetch-registry: false
    

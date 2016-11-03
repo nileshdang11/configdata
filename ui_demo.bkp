@@ -1,0 +1,93 @@
+---
+zuul:
+  ignoredServices: '*'
+  routes:
+    ms_demo_gateway: /ui_demo/gw/v1/**
+server: 
+  port: 8080
+eureka: 
+  client: 
+    register-with-eureka: false
+
+VersionConfig: 
+  gwAcronym: gw
+  gwVersion: v1
+  gwBaseUrl: http://localhost:8080/ui_demo/
+  gwDistribution : { "enabled" : false,
+    "routes": [
+        {
+            "url": "/ui_demo/gw/",
+            "schemes": [
+                {
+                    "version": "v1",
+                    "percent": "50"
+                },
+                {
+                    "version": "v2",
+                    "percent": "100"
+                }
+            ]
+        }
+    ]
+}
+---
+spring:
+  profiles: ui_config_change_to_v2
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    ms_demo_gateway_v2: /ui_demo/gw/v1/**
+  
+server: 
+  port: 8080
+eureka: 
+  client: 
+    register-with-eureka: false
+    
+VersionConfig: 
+  gwAcronym: gw
+  gwVersion: v1
+  gwBaseUrl: http://localhost:8080/ui_demo/
+    
+---
+spring:
+  profiles: ui_config_change_to_parallel
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    ms_demo_gateway: /ui_demo/gw/v1/**
+    ms_demo_gateway_v2: /ui_demo/gw/v2/**
+  
+server: 
+  port: 8080
+eureka: 
+  client: 
+    register-with-eureka: false
+    
+
+VersionConfig: 
+  gwAcronym: gw
+  gwVersion: v1
+  gwBaseUrl: http://localhost:8080/ui_demo/
+
+---
+spring:
+  profiles: ui_redeploy_change_to_v2
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    ms_demo_gateway_v2: /ui_demo/gw/v2/**
+  
+server: 
+  port: 8080
+eureka: 
+  client: 
+    register-with-eureka: false
+    
+VersionConfig: 
+  gwAcronym: gw
+  gwVersion: v1
+  gwBaseUrl: http://localhost:8080/ui_demo/
