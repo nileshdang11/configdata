@@ -7,7 +7,7 @@ eureka:
       defaultZone: http://localhost:8011/eureka/,http://localhost:8011/eureka/
 msProfile:
   message: called myv_ms_profile
-  name: John Doer
+  name: John Does
   message_v2: called myv_ms_profile called with endpoint of V2
   name_v2: John Doe II
 
