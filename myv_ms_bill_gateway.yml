@@ -8,7 +8,7 @@ turbine:
   cluster-name-expression: 'default'
   
 msBillGateway:
-  message: called myv_ms_bill_gateway changed
+  message: called myv_ms_bill_gateway
 ---
 spring:
   profiles: default
