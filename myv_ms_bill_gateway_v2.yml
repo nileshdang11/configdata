@@ -5,10 +5,23 @@ server:
 
 turbine:
   app-config: myv_ms_bill_gateway
-  cluster-name-expression: 'default'
+  cluster-name-expression: default
   
 msBillGateway:
   message: called myv_ms_bill_gateway_v2 
+  
+    
+  
+ribbon: 
+  ReadTimeout: 10000
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 ---
 spring:
   profiles: default
