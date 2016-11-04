@@ -5,7 +5,7 @@ server:
 
 turbine:
   app-config: myv_ms_bill_gateway
-  cluster-name-expression: new String("turbine_cluster")
+  cluster-config: MY_CLUSTER
   
 msBillGateway:
   message: called myv_ms_bill_gateway_v2 
