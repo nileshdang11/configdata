@@ -5,7 +5,8 @@ server:
 
 turbine:
   app-config: myv_ms_bill_gateway
-  cluster-config: MY_CLUSTER
+  clusterNameExpression: 'default'
+  instanceUrlSuffix: /hystrix.stream
   
 msBillGateway:
   message: called myv_ms_bill_gateway_v2 
