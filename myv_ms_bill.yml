@@ -7,7 +7,7 @@ eureka:
       defaultZone: http://localhost:8011/eureka/,http://localhost:8011/eureka/
 msBill:
   message: called myv_ms_bill
-  amount: 80.00
+  amount: 68.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
 
