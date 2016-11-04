@@ -9,6 +9,18 @@ turbine:
   
 msBillGateway:
   message: called myv_ms_bill_gateway changed
+  
+  
+ribbon: 
+  ReadTimeout: 10000
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 ---
 spring:
   profiles: default
