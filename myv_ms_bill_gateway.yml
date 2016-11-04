@@ -5,7 +5,7 @@ server:
 
 turbine:
   app-config: myv_ms_bill_gateway
-  clusterNameExpression: 'default'
+  clusterNameExpression: new String("default")
   instanceUrlSuffix: /hystrix.stream
   
 msBillGateway:
