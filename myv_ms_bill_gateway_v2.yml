@@ -1,7 +1,7 @@
 ---
 #/ms/profile/v1/hello
-server: 
-  port: 8086
+#server: 
+#  port: 8086
 
 turbine:
   app-config: myv_ms_bill_gateway
