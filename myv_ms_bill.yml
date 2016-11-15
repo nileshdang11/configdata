@@ -9,17 +9,11 @@ eureka:
 message: Hello
 whomToSayHello: Test message 5
 
----
-spring:
-  profiles: default
-
-
 msBill:
-#  message: called myv_ms_bill
+  message: called myv_ms_bill
   amount: 140.00
-#  message_v2: called myv_ms_bill called with one endpoint of V2
-#  amount_v2: 100.02
-  
+  message_v2: called myv_ms_bill called with one endpoint of V2
+  amount_v2: 100.02
 
 ---
 spring:
@@ -29,8 +23,7 @@ spring:
 msBill:
   message: called myv_ms_bill_secondInstance v2
   amount: 140.00
-  message_v2: called myv_ms_bill called with one endpoint of V2
-  amount_v2: 100.02
+
   
 ---
 spring:
@@ -38,10 +31,9 @@ spring:
 
 
 msBill:
-  message: called myv_ms_bill_secondInstance v3
+  #message: called myv_ms_bill_secondInstance v3
   amount: 160.00
-  message_v2: called myv_ms_bill called with one endpoint of V2
-  amount_v2: 100.02
+
   
 ---
 spring:
@@ -49,7 +41,5 @@ spring:
 
 
 msBill:
-  message: called myv_ms_bill_secondInstance v4
+  #message: called myv_ms_bill_secondInstance v4
   amount: 160.00
-  message_v2: called myv_ms_bill called with one endpoint of V2
-  amount_v2: 100.02
