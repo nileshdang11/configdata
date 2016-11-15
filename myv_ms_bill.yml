@@ -26,7 +26,7 @@ spring:
 
 
 msBill:
-  message: called myv_ms_bill TDC test
+  message: called myv_ms_bill TDC
   #amount: 140.00
 
   
