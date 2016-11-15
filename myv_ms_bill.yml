@@ -5,11 +5,29 @@ eureka:
   client: 
     serviceUrl:
       defaultZone: http://localhost:8011/eureka/,http://localhost:8011/eureka/
+
+message: Hello
+whomToSayHello: Test message 5
+
+---
+spring:
+  profiles: default
+
+
 msBill:
   message: called myv_ms_bill
   amount: 100.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
+  
 
-message: Hello
-whomToSayHello: Test message 5
+---
+spring:
+  profiles: ms_config_change_to_v2
+
+
+msBill:
+  message: called myv_ms_bill_secondInstance
+  amount: 120.00
+  message_v2: called myv_ms_bill called with one endpoint of V2
+  amount_v2: 100.02
