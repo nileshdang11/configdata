@@ -14,14 +14,19 @@ msBill:
   amount: 140.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
-
+  
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
 ---
 spring:
   profiles: tdc
 
 
 msBill:
-  message: called myv_ms_bill TDC
+  message: called myv_ms_bill TDC test
   #amount: 140.00
 
   
