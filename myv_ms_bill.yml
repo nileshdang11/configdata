@@ -17,29 +17,38 @@ msBill:
 
 ---
 spring:
-  profiles: ms_config_change_to_v2
+  profiles: tdc
 
 
 msBill:
-  message: called myv_ms_bill_secondInstance v2
-  amount: 140.00
+  message: called myv_ms_bill TDC
+  #amount: 140.00
 
   
 ---
 spring:
-  profiles: ms_config_change_to_v3
+  profiles: sdc
 
 
 msBill:
-  #message: called myv_ms_bill_secondInstance v3
-  amount: 160.00
+  message: called myv_ms_bill SDC
+  #amount: 160.00
 
   
 ---
 spring:
-  profiles: ms_config_change_to_v4
+  profiles: machine1
 
 
 msBill:
   #message: called myv_ms_bill_secondInstance v4
-  amount: 160.00
+  amount: 100.00
+  
+---
+spring:
+  profiles: machine2
+
+
+msBill:
+  #message: called myv_ms_bill_secondInstance v4
+  amount: 200.00
