@@ -11,7 +11,7 @@ whomToSayHello: Test message 5
 
 msBill:
   message: called myv_ms_bill
-  amount: 140.00
+  amount: 150.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
   
