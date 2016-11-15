@@ -27,7 +27,29 @@ spring:
 
 
 msBill:
-  message: called myv_ms_bill_secondInstance changed
-  amount: 130.00
+  message: called myv_ms_bill_secondInstance v2
+  amount: 140.00
+  message_v2: called myv_ms_bill called with one endpoint of V2
+  amount_v2: 100.02
+  
+---
+spring:
+  profiles: ms_config_change_to_v3
+
+
+msBill:
+  message: called myv_ms_bill_secondInstance v3
+  amount: 150.00
+  message_v2: called myv_ms_bill called with one endpoint of V2
+  amount_v2: 100.02
+  
+---
+spring:
+  profiles: ms_config_change_to_v4
+
+
+msBill:
+  message: called myv_ms_bill_secondInstance v3
+  amount: 150.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
