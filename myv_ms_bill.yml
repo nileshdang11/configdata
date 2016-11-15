@@ -16,7 +16,7 @@ spring:
 
 msBill:
   message: called myv_ms_bill
-  amount: 100.00
+  amount: 110.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
   
@@ -28,6 +28,6 @@ spring:
 
 msBill:
   message: called myv_ms_bill_secondInstance
-  amount: 120.00
+  amount: 130.00
   message_v2: called myv_ms_bill called with one endpoint of V2
   amount_v2: 100.02
