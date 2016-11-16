@@ -33,4 +33,4 @@ spring:
   profiles: jvm1
 
 msBill:
-  message: called myv_ms_bill SDC SDC node1 jvm1
+  message: called myv_ms_bill SDC node1 jvm1 test

@@ -21,7 +21,7 @@ spring:
 msBill:
   message: called myv_ms_bill ODC
   amount: 140.00
-  message_v2: called myv_ms_bill TDC called with one endpoint of V2
+  message_v2: called myv_ms_bill ODC called with one endpoint of V2
   amount_v2: 100.02
 
 ---
@@ -35,4 +35,4 @@ spring:
   profiles: jvm1
   
 msBill:
-  message: called myv_ms_bill ODC node1 jvm1
+  message: called myv_ms_bill ODC node1 jvm1 test
