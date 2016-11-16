@@ -1,23 +1,4 @@
 ---
-  
-#server:
-#  port: 8092
-eureka: 
-  client: 
-    serviceUrl:
-      defaultZone: http://localhost:8011/eureka/,http://localhost:8011/eureka/
-
-message: Hello
-whomToSayHello: Test message 5
-  
-spring:
-  cloud:
-    bus:
-      trace:
-        enabled: true
-
-
-
 msBill:
   message: called myv_ms_bill ODC
   amount: 140.00
@@ -28,11 +9,10 @@ msBill:
 spring:
   profiles: node1
 
-msBill:
-  message: called myv_ms_bill ODC node1
+
 ---
 spring:
-  profiles: jvm1
-  
+  profiles: node2
+
 msBill:
-  message: called myv_ms_bill ODC node1 jvm1 test
+  message: called myv_ms_bill ODC node2
