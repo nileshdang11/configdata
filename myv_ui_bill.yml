@@ -17,7 +17,7 @@ hystrix:
             timeoutInMilliseconds: 10000
 ---
 spring:
-  profiles: odc
+  profiles: default
     
 zuul:
   ignoredServices: '*'
@@ -46,15 +46,6 @@ VersionConfig:
   gwBaseUrl: http://localhost:8080/
 
 ---
-spring:
-  profiles: node1
-
----
-spring:
-  profiles: jvm1
-
----
-
 spring:
   profiles: ui_redeploy_change_to_v2
   

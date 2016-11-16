@@ -24,7 +24,7 @@ hystrix:
             timeoutInMilliseconds: 10000
 ---
 spring:
-  profiles: odc
+  profiles: default
 
 VersionConfig:
   profileBaseUrl: /ms/profile/
@@ -36,15 +36,7 @@ VersionConfig:
   billBaseUrl: /ms/bill/
   billServiceName: myv_ms_bill
   billVersion: v1
-
----
-spring:
-  profiles: node1
   
----
-spring:
-  profiles: jvm1
- 
 ---
 spring:
   profiles: gw_config_change_to_v2

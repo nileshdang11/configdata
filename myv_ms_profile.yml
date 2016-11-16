@@ -13,15 +13,3 @@ msProfile:
 
 message: Hello
 whomToSayHello: Nilesh from myv_ms_profile_v2
-
----
-spring:
-  profiles: odc
-
----
-spring:
-  profiles: node1
-
----
-spring:
-  profiles: jvm1

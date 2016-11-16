@@ -1,7 +1,4 @@
 ---
-spring:
-  profiles: odc
-  
 server:
   port: 8011
 
@@ -12,15 +9,8 @@ eureka:
 #    preferIpAddress: false 
     register-with-eureka: false
     fetch-registry: false
- 
----
-spring:
-  profiles: node1
-  
----
-spring:
-  profiles: jvm1
- 
+   
+
 ---
 spring:
   profiles: primary
