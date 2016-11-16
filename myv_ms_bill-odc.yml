@@ -22,38 +22,19 @@ spring:
         enabled: true
 ---
 spring:
-  profiles: tdc
+  profiles: odc
 
 
 msBill:
   message: called myv_ms_bill TDC
   #amount: 140.00
+  message_v2: called myv_ms_bill TDC called with one endpoint of V2
+  #amount_v2: 100.02
 
-  
 ---
 spring:
-  profiles: sdc
+  profiles: node1
 
-
-msBill:
-  message: called myv_ms_bill SDC
-  #amount: 160.00
-
-  
 ---
 spring:
-  profiles: machine1
-
-
-msBill:
-  #message: called myv_ms_bill_secondInstance v4
-  amount: 100.00
-  
----
-spring:
-  profiles: machine2
-
-
-msBill:
-  #message: called myv_ms_bill_secondInstance v4
-  amount: 200.00
+  profiles: jvm1
