@@ -1,6 +1,4 @@
 ---
-spring:
-  profiles: sdc
 #server:
 #  port: 8092
 eureka: 

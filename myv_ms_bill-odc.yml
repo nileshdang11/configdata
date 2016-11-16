@@ -1,6 +1,4 @@
 ---
-spring:
-  profiles: odc
   
 #server:
 #  port: 8092
