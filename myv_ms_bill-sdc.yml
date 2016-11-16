@@ -1,4 +1,6 @@
 ---
+spring:
+  profiles: sdc
 #server:
 #  port: 8092
 eureka: 
@@ -9,32 +11,28 @@ eureka:
 message: Hello
 whomToSayHello: Test message 5
 
-msBill:
-  message: called myv_ms_bill
-  amount: 150.00
-  message_v2: called myv_ms_bill called with one endpoint of V2
-  amount_v2: 100.02
-  
 spring:
   cloud:
     bus:
       trace:
         enabled: true
----
-spring:
-  profiles: sdc
 
 
 msBill:
   message: called myv_ms_bill SDC
-  #amount: 160.00
+  amount: 160.00
   message_v2: called myv_ms_bill SDC called with one endpoint of V2
-  #amount_v2: 100.02
+  amount_v2: 100.02
 
 ---
 spring:
   profiles: node1
 
+msBill:
+  message: called myv_ms_bill SDC node1
 ---
 spring:
   profiles: jvm1
+
+msBill:
+  message: called myv_ms_bill SDC SDC node1 jvm1
