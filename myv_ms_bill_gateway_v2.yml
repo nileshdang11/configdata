@@ -30,7 +30,7 @@ spring:
 VersionConfig:
   profileBaseUrl: /ms/profile/
   profileServiceName: myv_ms_profile
-  profileVersion: v2
+  profileVersion: v1
 
   billBaseUrl: /ms/bill/
   billServiceName: myv_ms_bill

@@ -24,44 +24,18 @@ hystrix:
             timeoutInMilliseconds: 10000
 ---
 spring:
-  profiles: default
+  profiles: odc
 
 VersionConfig:
   profileBaseUrl: /ms/profile/
-#  profileServiceName: myv_ms_profile_v2
+#  profileServiceName: myv_ms_profile_v2 -- gw_config_change_to_v2
   profileServiceName: myv_ms_profile
   profileVersion: v1
-#  profileVersion: v2
   
   billBaseUrl: /ms/bill/
   billServiceName: myv_ms_bill
   billVersion: v1
-  
----
-spring:
-  profiles: gw_config_change_to_v2
 
-VersionConfig:
-  profileServiceName: myv_ms_profile
-  profileBaseUrl: /ms/profile/
-  profileVersion: v2
-
-  billServiceName: myv_ms_bill
-  billVersion: v1
-  billBaseUrl: /ms/bill/
-
----
-spring:
-  profiles: gw_config_change_to_standalone_v2
-
-VersionConfig:
-  profileServiceName: myv_ms_profile_v2
-  profileBaseUrl: /ms/profile/
-  profileVersion: v2
-
-  billServiceName: myv_ms_bill
-  billVersion: v1
-  billBaseUrl: /ms/bill/
     
 ---
 #spring:
