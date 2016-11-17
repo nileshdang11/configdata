@@ -28,8 +28,8 @@ spring:
 
 VersionConfig:
   profileBaseUrl: /ms/profile/
-#  profileServiceName: myv_ms_profile_v2 -- gw_config_change_to_v2
-  profileServiceName: myv_ms_profile
+  profileServiceName: myv_ms_profile_v2 #-- gw_config_change_to_v2
+#  profileServiceName: myv_ms_profile
   profileVersion: v1
   
   billBaseUrl: /ms/bill/
