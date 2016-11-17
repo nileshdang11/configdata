@@ -1,6 +1,6 @@
 ---
 msBill:
-  message: called myv_ms_bill ODC change at pop level
+  message: called myv_ms_bill ODC
   amount: 150.00
 
 
