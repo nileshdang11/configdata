@@ -2,8 +2,7 @@
 msBill:
   message: called myv_ms_bill ODC change at pop level
   amount: 150.00
-  message_v2: called myv_ms_bill ODC called with one endpoint of V2
-  amount_v2: 100.02
+
 
 ---
 spring:
@@ -13,6 +12,3 @@ spring:
 ---
 spring:
   profiles: node2
-
-msBill:
-  message: called myv_ms_bill ODC node2 change at node level
