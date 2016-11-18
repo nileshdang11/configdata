@@ -8,7 +8,13 @@ msBill:
 spring:
   profiles: node1
 
+msBill:
+  message: called myv_ms_bill ODC node 1
+  amount: 00.00
 
 ---
 spring:
   profiles: node2
+msBill:  
+  message: called myv_ms_bill ODC node 2
+  amount: 10.00
