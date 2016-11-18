@@ -2,23 +2,23 @@
 zuul:
   ignoredServices: '*'
   routes:
-#    myv_ms_bill_gateway: /gw/bill/v1/**
-    myv_ms_bill_gateway_v2: /gw/bill/v1/** #-- ui_config_change_to_v2
-#    myv_ms_bill_gateway_v2: /gw/bill/v2/** #-- ui_redeploy_change_to_v2
+    myv_ms_bill_gateway: /gw/bill/v1/**
+#    myv_ms_bill_gateway_v2: /gw/bill/v1/** #-- ui_config_change_to_v2
+    myv_ms_bill_gateway_v2: /gw/bill/v2/** #-- ui_redeploy_change_to_v2
 VersionConfig: 
   jsVersion: v2
   gwName: bill
   gwAcronym: gw
   gwVersion: v1
   gwBaseUrl: http://localhost:8080/
-  gwDistribution : { "enabled" : false,
+  gwDistribution : { "enabled" : true,
     "routes": [
         {
             "url": "/gw/bill/",
             "schemes": [
                 {
                     "version": "v1",
-                    "percent": "50"
+                    "percent": "30"
                 },
                 {
                     "version": "v2",
