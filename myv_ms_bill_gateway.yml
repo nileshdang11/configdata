@@ -9,7 +9,7 @@ turbine:
   instanceUrlSuffix: turbine.stream
   
 msBillGateway:
-  message: called myv_ms_bill_gateway changed
+  message: called myv_ms_bill_gateway
   
   
 ribbon: 
